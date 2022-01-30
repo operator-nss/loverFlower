@@ -66,7 +66,12 @@
 //========================================================================================================================================================
 
 .header {
-   background: #000000;
+
+   background-color: transparent;
+   // margin-bottom: -75px;
+   position: relative;
+   z-index: 5;
+
    // .header__container
 
    &__container {
@@ -139,10 +144,10 @@
       }
       transition: all 0.3s ease 0s;
       @media (any-hover: hover) {
-        &:hover {
-         color: #43FFD2;
-         text-decoration: underline;
-       }
+         &:hover {
+            color: #43ffd2;
+            text-decoration: underline;
+         }
       }
    }
 

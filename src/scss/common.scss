@@ -1,1 +1,38 @@
 // Заголовки, общие БЄМ блоки и проче...
+.button {
+   font-weight: bold;
+   font-size: 12px;
+   line-height: math.div(18, 12);
+   letter-spacing: 0.1em;
+   text-transform: uppercase;
+   color: #000000;
+   padding: rem(16) rem(50);
+   background-color: $green;
+   transition: all 0.3s ease 0s;
+   outline: none;
+   width: 220px;
+   height: 50px;
+   display: inline-flex;
+   justify-content: center;
+   align-items: center;
+   white-space: nowrap;
+
+   // .button__green
+
+   &__green {
+      @media (any-hover: hover) {
+         &:hover {
+            background-color: $purple;
+            color: #fff;
+         }
+      }
+      &:focus {
+         border: 1px solid #7d2253;
+      }
+      &:active {
+         background: #7d2253;
+         box-shadow: inset 0px 0px 10px #1b000e;
+         color: #fff;
+      }
+   }
+}

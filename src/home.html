@@ -1,17 +1,92 @@
 <!DOCTYPE html>
 <html lang="ru">
-	@@include('html/_head.htm',{
-	"title":"Главная"
-	})
-	<body>
-		<div class="wrapper">
-			@@include('html/_header.htm',{})
-			<main class="page">
-			</main>
-         <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-			@@include('html/_footer.htm',{})
-		</div>
-		@@include('html/_popup.htm',{})
-		@@include('html/_js.htm',{})
-	</body>
+@@include('html/_head.htm',{
+"title":"Главная"
+})
+
+<body>
+   <div class="wrapper">
+      @@include('html/_header.htm',{})
+      <main class="page">
+
+         <div class="page__mainblock mainblock">
+            <div class="mainblock__image-bg-ibg">
+               <img src="@img/main/01.png" alt="">
+            </div>
+            <div class="mainblock__image-top-ibg">
+               <img src="@img/main/02.png" alt="">
+            </div>
+
+            <div class="mainblock__container">
+
+               <div class="mainblock__content">
+
+                  <div class="mainblock__titles">
+                     <div class="mainblock__title">lover</div>
+                     <div class="mainblock__title mainblock__title_top">flower</div>
+                  </div>
+
+                  <div class="mainblock__subtitle">Создаём для тех, кто ценит свежесть и изящество цветка</div>
+
+                  <a href="" class="mainblock__button button button__green">смотреть каталог</a>
+               </div>
+
+
+               <div class="mainblock__side side-mainblock">
+
+                  <div class="side-mainblock__addresses">
+                     <div class="side-mainblock__address address-side-mainblock">
+                        <a href="mailto:zakaz@loverflower.by"
+                           class="address-side-mainblock__mail">zakaz@loverflower.by</a>
+                        <div class="address-side-mainblock__text">Доставка 24/7 по договоренности с оператором</div>
+                     </div>
+                     <div class="side-mainblock__address address-side-mainblock">
+                        <a href="" class="address-side-mainblock__mail">ул. Тимирязева 67</a>
+                        <div class="address-side-mainblock__text">10:00 до 21:00<br>
+                           без выходных</div>
+                     </div>
+                  </div>
+
+                  <div class="side-mainblock__social social-side-mainblock">
+                     <div class="social-side-mainblock__items">
+                        <div class="social-side-mainblock__item _icon-insta"></div>
+                        <div class="social-side-mainblock__item _icon-whatsup"></div>
+                        <div class="social-side-mainblock__item _icon-call"></div>
+                     </div>
+                  </div>
+
+                  <div class="side-mainblock__phones phones-side-mainblock">
+                     <a href="tel:+375291136969" class="phones-side-mainblock__phone">+375 (29) 113-69-69</a>
+                     <div class="phones-side-mainblock__order _icon-phone">заказать звонок</div>
+                  </div>
+
+                  <div class="side-mainblock__phones__cart _icon-cart "><span>5</span></div>
+
+
+               </div>
+
+
+
+            </div> <!-- container -->
+
+            <div class="mainblock__signature signature-mainblock">
+               <div class="signature-mainblock__container">
+                  <div class="signature-mainblock__signature-text">Lover<br>
+                     Flower</div>
+               </div>
+            </div>
+
+         </div>
+
+   </div>
+
+
+   </main>
+   <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+   @@include('html/_footer.htm',{})
+   </div>
+   @@include('html/_popup.htm',{})
+   @@include('html/_js.htm',{})
+</body>
+
 </html>
