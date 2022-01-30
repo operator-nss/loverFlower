@@ -14,3 +14,29 @@
 		display: block;
 	}
 }
+
+
+._icon-arrow:before {
+   content: "\e900";
+ }
+ ._icon-arrow-radius:before {
+   content: "\e901";
+ }
+ ._icon-call:before {
+   content: "\e902";
+ }
+ ._icon-cart:before {
+   content: "\e903";
+ }
+ ._icon-insta:before {
+   content: "\e904";
+ }
+ ._icon-phone:before {
+   content: "\e905";
+ }
+ ._icon-search:before {
+   content: "\e906";
+ }
+ ._icon-whatsup:before {
+   content: "\e907";
+ }

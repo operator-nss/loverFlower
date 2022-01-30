@@ -52,3 +52,107 @@
 	}
 }
 */
+//========================================================================================================================================================
+
+// .ellipse {
+//    width: 879.44px;
+//    height: 211.05px;
+//    filter: blur(100px);
+//    border-radius: 50%;
+//    background: #43ffd2;
+//    transform: rotate(32.83deg);
+// }
+
+//========================================================================================================================================================
+
+.header {
+   background: #000000;
+   // .header__container
+
+   &__container {
+      display: flex;
+      align-items: center;
+   }
+
+   // .header__logo
+
+   &__logo {
+      margin: rem(0) rem(50) rem(0) rem(0);
+      font-family: Cormorant;
+      font-style: normal;
+      font-weight: 300;
+      font-size: 60px;
+      line-height: math.div(73, 60);
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
+      color: #8a8686;
+      position: relative;
+      span {
+         font-size: 50px;
+         line-height: math.div(61, 50);
+         color: #ffffff;
+         position: absolute;
+         display: inline-block;
+         top: 13px;
+         left: 8px;
+      }
+   }
+
+   // .header__menu
+
+   &__menu {
+   }
+}
+.menu {
+   max-width: 733px;
+   width: 100%;
+   // .menu__header
+
+   &__header {
+   }
+
+   // .menu__list
+
+   &__list {
+      padding: rem(0) rem(15);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+   }
+
+   // .menu__item
+
+   &__item {
+      padding: rem(20) rem(5);
+   }
+
+   // .menu__link
+
+   &__link {
+      &._icon-search {
+         display: flex;
+         align-items: center;
+         &::before {
+            font-size: rem(14);
+            padding: rem(0) rem(12) rem(0) rem(0);
+         }
+      }
+      transition: all 0.3s ease 0s;
+      @media (any-hover: hover) {
+        &:hover {
+         color: #43FFD2;
+         text-decoration: underline;
+       }
+      }
+   }
+
+   // .menu__body
+
+   &__body {
+   }
+
+   // .menu__icon
+
+   &__icon {
+   }
+}
