@@ -2,11 +2,14 @@
    <div class="header__container">
       <button hidden type="button" class="menu__icon icon-menu"><span></span></button>
 
-      <a href="" class="header__logo">l<span>f</span></a>
+      <a href="" data-da=".menu__body,991.98,first" class="header__logo">l<span>f</span></a>
 
       <div class="header__menu menu">
-         <nav class="menu__header">
+         <nav data-da=".menu__body,991.98,0" class="menu__header">
             <ul class="menu__list">
+               <li class="menu__item menu__item-hidden">
+                  <a href="" class="menu__link">Главная</a>
+               </li>
                <li class="menu__item">
                   <a href="" class="menu__link">Каталог</a>
                </li>
@@ -22,13 +25,21 @@
                <li class="menu__item">
                   <a href="" class="menu__link">FAQ</a>
                </li>
-               <li class="menu__item">
-                  <a href="" class="menu__link _icon-search">поиск</a>
+               <li class="menu__item menu__item-hidden">
+                  <a href="" class="menu__link">для корпоративных клиентов</a>
                </li>
+
             </ul>
+            <div class="menu__search _icon-search">поиск</div>
          </nav>
 
-         <nav hidden class="menu__body">
+         <nav hidden class="menu__body body-menu">
+
+            <div class="body-menu__links">
+               <a href="" class="body-menu__link">Политика конфиденциальности</a>
+               <a href="" class="body-menu__link">Обработка персональных данных</a>
+               <a href="tel:+375291136969" class="body-menu__phone">+375 (29) 113-69-69</a>
+            </div>
 
          </nav>
 

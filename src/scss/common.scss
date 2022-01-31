@@ -35,4 +35,26 @@
          color: #fff;
       }
    }
+
+   // .button__transparent
+
+   &__transparent {
+      background-color:transparent;
+      border: 0.5px solid #FFFFFF;
+      color: #fff;
+      @media (any-hover: hover) {
+         &:hover {
+            background-color: $green;
+            color: #000;
+         }
+      }
+      &:focus {
+         border: 0.5px solid #43FFD2;
+      }
+      &:active {
+         background: #43FFD2;
+         box-shadow: inset 0px 0px 10px #01281F;
+         color: #000;
+      }
+   }
 }
