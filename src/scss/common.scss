@@ -58,3 +58,27 @@
       }
    }
 }
+
+.signature {
+   font-size: 160px;
+   padding: rem(0) rem(0) rem(40) rem(0);
+   line-height: math.div(70, 160);
+   text-transform: capitalize;
+   color: #1f3a3a;
+   font-family: Relative;
+   transform: rotate(-10.26deg);
+   display: inline-block;
+   justify-content: end;
+   position: relative;
+   z-index: 5;
+}
+
+.title {
+   font-family: Cormorant;
+   font-size: 100px;
+   @include adaptiveValue("font-size", 100, 40);
+   line-height: math.div(121 , 100);
+   letter-spacing: 0.02em;
+   text-transform: uppercase;
+   margin-bottom: 15px;
+}
