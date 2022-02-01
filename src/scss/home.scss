@@ -720,6 +720,7 @@
       z-index: 2;
       font-family: Cormorant;
       font-size: 100px;
+      @include adaptiveValue("font-size", 100, 40);
       line-height: math.div(100, 100);
       letter-spacing: 0.02em;
       text-transform: uppercase;
@@ -729,7 +730,11 @@
       span {
          position: relative;
          left: 385px;
+         @media (max-width:$mobile){
+             left: 0;
+         }
       }
+
    }
 
    // .popular__subtitle
@@ -771,6 +776,11 @@
    // .popular__wrapper
 
    &__wrapper {
+      @media (max-width: $tablet) {
+         flex-wrap: wrap;
+         gap: rem(40);
+         justify-content: center;
+      }
    }
 
    // .popular__slide
@@ -782,6 +792,9 @@
 .slide-popular {
    position: relative;
    flex: 0 1 rem(350);
+   @media (max-width: $tablet) {
+      flex: 0 1 33.333%;
+   }
    @media (any-hover: hover) {
       &:hover {
          .slide-popular__image-ibg {
@@ -833,9 +846,11 @@
    &__image-ibg {
       display: block;
       padding: rem(0) rem(0) 128.8% rem(0);
-      img {
-         filter: grayscale(1);
-         transition: all 0.3s ease 0s;
+      @media (min-width: $tablet) {
+         img {
+            filter: grayscale(1);
+            transition: all 0.3s ease 0s;
+         }
       }
    }
 
@@ -910,7 +925,7 @@
    z-index: 2;
    font-size: 0;
    background: transparent;
-
+   padding: 20px;
    cursor: pointer;
    &::before {
       font-size: rem(6);
@@ -920,18 +935,19 @@
    @media (any-hover: hover) {
       &:hover {
          &::before {
-            color: #D978AC;
+            color: #d978ac;
          }
       }
    }
+   @media (max-width: $tablet) {
+      display: none;
+   }
 }
-
-
 
 .popular-button-prev {
-   left: 70px;
+   left: 250px;
 }
 .popular-button-next {
-   right: 70px;
+   right: 250px;
    transform: rotate(-180deg);
 }
