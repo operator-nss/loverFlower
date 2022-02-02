@@ -84,3 +84,10 @@
       margin-bottom: rem(15);
    }
 }
+
+.footer-link {
+   line-height: math.div(21 , 14);
+   letter-spacing: 0.04em;
+   text-transform: uppercase;
+   color: #43ffd2;
+}

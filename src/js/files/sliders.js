@@ -193,8 +193,12 @@ function swiperMode() {
 
    // Disable (for tablet)
    else if (tablet.matches) {
-      swiper.destroy();
-      init = false;
+      if (init === true) {
+         swiper.destroy();
+         init = false;
+      }
+
+
    }
 
 

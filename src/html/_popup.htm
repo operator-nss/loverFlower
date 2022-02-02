@@ -1,11 +1,23 @@
-<!-- 
-<div id="popup" aria-hidden="true" class="popup">
-	<div class="popup__wrapper">
-		<div class="popup__content">
-			<button data-close type="button" class="popup__close">Закрыть</button>
-			<div class="popup__text">
-			</div>
-		</div>
-	</div>
+<div id="call" aria-hidden="true" class="popup call-popup__popup">
+   <div class="popup__wrapper call-popup__wrapper">
+      <div class="popup__content call-popup__content">
+         <button data-close type="button" class="popup__close call-popup__close"><span></span></button>
+         <div class="popup__text call-popup__body body-call-popup">
+            <div class="body-call-popup__title">заказать звонок</div>
+            <div class="body-call-popup__text">Впишите свои данные, и мы свяжемся с Вами. Ваши данные ни при каких
+               обстоятельствах не будут переданы третьим лицам.</div>
+            <form data-dev action="#" class="body-call-popup__form form-body-call-popup form">
+               <input data-required data-validate autocomplete="off" type="text" name="form[]" data-error="Введите имя"
+                  placeholder="Ваше имя" class="form-body-call-popup__input input">
+               <input data-required data-validate autocomplete="off" type="text" name="form[]" data-error="Введите телефон"
+                  placeholder="+7 (977) 777-77-77" class="form-body-call-popup__input input">
+                  <button type="submit" class="form-body-call-popup__button button button__green">Отправить</button>
+
+                  <div class="form-body-call-popup__confidentiality">Нажимая на кнопку «Отправить», я даю свое согласие на
+                     обработку <br> персональных данных, в соответствии с <a href="">Политикой конфиденциальности</a>
+                  </div>
+            </form>
+         </div>
+      </div>
+   </div>
 </div>
- -->

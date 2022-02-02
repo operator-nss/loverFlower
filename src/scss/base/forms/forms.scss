@@ -1,4 +1,4 @@
-//<FORM>
+ //<FORM>
 // Снипет (HTML):
 .form {
 
@@ -15,8 +15,12 @@
    &__error {
       color: red;
       position: absolute;
-      right: -100px;
-      top: 20px;
+      left: 0px;
+      top: -25px;
+      .body-call-popup__form & {
+         top: 152px;
+
+      }
    }
 }
 //</FORM>
