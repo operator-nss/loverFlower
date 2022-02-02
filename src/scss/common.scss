@@ -10,7 +10,7 @@
    background-color: $green;
    transition: all 0.3s ease 0s;
    outline: none;
-   width: 220px;
+   min-width: 220px;
    height: 50px;
    display: inline-flex;
    justify-content: center;
@@ -39,8 +39,8 @@
    // .button__transparent
 
    &__transparent {
-      background-color:transparent;
-      border: 0.5px solid #FFFFFF;
+      background-color: transparent;
+      border: 0.5px solid #ffffff;
       color: #fff;
       @media (any-hover: hover) {
          &:hover {
@@ -49,11 +49,11 @@
          }
       }
       &:focus {
-         border: 0.5px solid #43FFD2;
+         border: 0.5px solid #43ffd2;
       }
       &:active {
-         background: #43FFD2;
-         box-shadow: inset 0px 0px 10px #01281F;
+         background: #43ffd2;
+         box-shadow: inset 0px 0px 10px #01281f;
          color: #000;
       }
    }
@@ -77,8 +77,10 @@
    font-family: Cormorant;
    font-size: 100px;
    @include adaptiveValue("font-size", 100, 40);
-   line-height: math.div(121 , 100);
+   line-height: math.div(121, 100);
    letter-spacing: 0.02em;
    text-transform: uppercase;
-   margin-bottom: 15px;
+   &:not(:last-child) {
+      margin-bottom: rem(15);
+   }
 }

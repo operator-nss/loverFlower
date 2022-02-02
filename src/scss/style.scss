@@ -160,4 +160,18 @@ body {
 
    &__order {
    }
+
+   // .page__occasion
+
+   &__occasion {
+      @include adaptiveValue("padding-top", 100, 50);
+      @include adaptiveValue("padding-bottom", 100, 50);
+   }
+
+   // .page__questions
+
+   &__questions {
+      padding-top: 30px;
+      padding-bottom: 50px;
+   }
 }
