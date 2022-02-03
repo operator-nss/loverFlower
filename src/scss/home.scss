@@ -682,7 +682,7 @@
    &::before,
    &::after {
       content: "";
-      filter: blur(130px);
+
       border-radius: 50%;
       position: absolute;
       top: 50%;
@@ -691,6 +691,7 @@
    &::before {
       background: #43ffd2;
       right: 0;
+      filter: blur(96px);
       width: rem(708);
       height: rem(236);
       @include adaptiveValue("width", 707, 350);
@@ -703,6 +704,7 @@
    &::after {
       left: -5%;
       width: rem(880);
+      filter: blur(80px);
       height: rem(212);
       @include adaptiveValue("width", 879, 450);
       @include adaptiveValue("height", 211, 300);
@@ -958,39 +960,38 @@
       height: rem(211);
       @include adaptiveValue("width", 814, 500);
       @include adaptiveValue("height", 661, 400);
-      filter: blur(130px);
+
       border-radius: 50%;
       position: absolute;
       z-index: 2;
-      @media (max-width: $tablet) {
-         filter: blur(50px);
-      }
    }
    &::before {
       top: 50%;
       left: -5%;
+      filter: blur(75px);
       background: #43ffd2;
       transform: rotate(32.83deg);
       opacity: 0.8;
-      // border-radius: 40% 60% 0% 100% / 8% 100% 0% 92%;
-      background: rgba(67, 255, 210, 0.47);
+      border-radius: 40% 60% 0% 100% / 8% 100% 0% 92%;
+      // background: rgba(67, 255, 210, 0.47);
       @media (max-width: $tablet) {
          left: 0%;
          top: 10%;
-         opacity: 1;
-         filter: blur(150px);
+         opacity: 0.6;
       }
    }
    &::after {
       background: #7d2253;
-      right: 0%;
+      right: 30%;
+      opacity: 0.6;
+      filter: blur(85px);
       transform: rotate(-32.83deg);
       top: 40%;
       // border-radius: 29% 71% 18% 82% / 27% 72% 28% 73%;
 
       @media (max-width: $tablet) {
          top: 50%;
-         filter: blur(150px);
+         // filter: blur(150px);
          transform: rotate(-180deg);
       }
    }
@@ -1280,41 +1281,29 @@
          height: rem(211);
          @include adaptiveValue("width", 814, 500);
          @include adaptiveValue("height", 661, 400);
-         filter: blur(130px);
          border-radius: 50%;
          position: absolute;
          z-index: 1;
-         // @media (max-width: $tablet) {
-         //    filter: blur(50px);
-         // }
-      }
-      &::before {
-         top: 50%;
-         left: -5%;
-         background: #43ffd2;
-         transform: rotate(32.83deg);
-         // opacity: 0.8;
-         // border-radius: 40% 60% 0% 100% / 8% 100% 0% 92%;
-         background: rgba(67, 255, 210, 0.47);
-         // @media (max-width: $tablet) {
-         left: 0%;
-         top: 10%;
-         opacity: 1;
-         filter: blur(170px);
-         // }
       }
       &::after {
+         top: 30%;
+         filter: blur(83px);
+         left: -5%;
          background: #7d2253;
-         right: 0%;
+         transform: rotate(32.83deg);
+         opacity: 0.5;
+         border-radius: 40% 60% 0% 100% / 8% 100% 0% 92%;
+         left: 0%;
+         top: 10%;
+      }
+      &::before {
+         background: #43ffd2;
+         right: 25%;
+         filter: blur(82px);
+         opacity: 0.5;
          transform: rotate(-32.83deg);
-         top: 40%;
-         // border-radius: 29% 71% 18% 82% / 27% 72% 28% 73%;
-
-         // @media (max-width: $tablet) {
-         //    top: 50%;
-         //    filter: blur(170px);
-         //    transform: rotate(-180deg);
-         // }
+         top: 60%;
+         border-radius: 29% 71% 18% 82% / 27% 72% 28% 73%;
       }
    }
    // .order__bg
@@ -1693,7 +1682,7 @@
    &::before,
    &::after {
       content: "";
-      filter: blur(110px);
+
       border-radius: 50%;
       position: absolute;
       @media (max-width: $tablet) {
@@ -1705,6 +1694,7 @@
       width: rem(250);
       height: rem(300);
       left: 33%;
+      filter: blur(120px);
       background: #43ffd2;
       transform: rotate(32.83deg);
       z-index: 2;
@@ -1718,6 +1708,7 @@
       background: #7d2253;
       width: rem(420);
       height: rem(430);
+      filter: blur(100px);
       left: 5%;
       transform: rotate(-32.83deg);
       top: 20%;
