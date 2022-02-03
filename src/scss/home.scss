@@ -3,6 +3,7 @@
 .mainblock {
    position: relative;
    width: 100%;
+   padding-bottom: rem(500);
    @include adaptiveValue("padding-bottom", 800, 300);
 
    // .mainblock__image-bg-ibg
@@ -17,8 +18,8 @@
       &::before,
       &::after {
          content: "";
-         width: 879.44px;
-         height: 211.05px;
+         width: rem(880);
+         height: rem(212);
          @include adaptiveValue("width", 879, 250);
          @include adaptiveValue("height", 211, 150);
          filter: blur(130px);
@@ -77,6 +78,8 @@
       display: flex;
       flex-direction: column;
       align-items: center;
+      padding-top: rem(50);
+      padding-bottom: rem(200);
       @include adaptiveValue("padding-top", 93, 14);
       @include adaptiveValue("padding-bottom", 223, 200);
    }
@@ -97,7 +100,7 @@
    &__title {
       font-family: Cormorant;
       font-weight: 300;
-      font-size: 200px;
+      font-size: rem(200);
       @include adaptiveValue("font-size", 200, 50);
       line-height: math.div(242, 200);
       letter-spacing: 0.2em;
@@ -112,7 +115,7 @@
 
       &_top {
          position: relative;
-         bottom: 95px;
+         bottom: rem(95);
          @include adaptiveValue("bottom", 95, 0);
          z-index: 5;
       }
@@ -131,7 +134,7 @@
       position: relative;
       z-index: 4;
       @media (min-width: $pc) {
-         margin-top: -100px;
+         margin-top: rem(-100);
       }
       &:not(:last-child) {
          margin-bottom: rem(47);
@@ -166,9 +169,8 @@
    left: 0;
    z-index: 5;
    width: 100%;
-   height: 406px;
+   height: rem(406);
    @include adaptiveValue("height", 700, 105);
-   // @include adaptiveValue("height", 406, 700,1700,320,1);
    &::before {
       content: "";
       position: absolute;
@@ -242,24 +244,26 @@
    &__cart {
       background: rgba(0, 0, 0, 0.2);
       backdrop-filter: blur(20px);
-      border-radius: 10px;
+      border-radius: rem(10);
       display: inline-block;
       position: relative;
+      cursor: pointer;
       transition: transform 0.3s ease 0s;
       @media (max-width: $tablet) {
          position: absolute;
-         top: 20px;
-         right: 20px;
+         top: rem(20);
+         right: rem(20);
          ._header-scroll & {
-            top: -3px;
-            right: 10px;
+            top: rem(-3);
+            right: rem(10);
             backdrop-filter: blur(0);
-            background:none;
+            background: none;
          }
       }
 
       &::before {
          font-size: rem(25);
+         padding: rem(16);
          @include adaptiveValue("padding", 18, 12);
       }
       @media (any-hover: hover) {
@@ -270,10 +274,10 @@
       span {
          position: absolute;
          background: #43ffd2;
-         width: 16px;
-         height: 16px;
+         width: rem(16);
+         height: rem(16);
          border-radius: 50%;
-         font-size: 12px;
+         font-size: rem(12);
          line-height: math.div(18, 12);
          letter-spacing: 0.04em;
          text-transform: uppercase;
@@ -281,8 +285,8 @@
          display: flex;
          justify-content: center;
          align-items: center;
-         right: 9px;
-         top: 15px;
+         right: rem(9);
+         top: rem(15);
       }
    }
 }
@@ -311,7 +315,7 @@
 
    &__text {
       font-weight: 300;
-      font-size: 10px;
+      font-size: rem(10);
       line-height: math.div(15, 10);
       letter-spacing: 0.1em;
       text-transform: uppercase;
@@ -321,7 +325,7 @@
    display: inline-block;
    background: rgba(0, 0, 0, 0.2);
    backdrop-filter: blur(20px);
-   border-radius: 10px;
+   border-radius: rem(10);
    &:not(:last-child) {
       margin-bottom: rem(184);
    }
@@ -333,7 +337,7 @@
    // .social-side-mainblock__items
 
    &__items {
-      padding: 20px;
+      padding: rem(20);
       position: relative;
       z-index: 4;
 
@@ -375,7 +379,7 @@
    // .phones-side-mainblock__phone
 
    &__phone {
-      font-size: 16px;
+      font-size: rem(16);
       line-height: math.div(24, 16);
       letter-spacing: 0.1em;
       display: inline-block;
@@ -397,7 +401,6 @@
    // .phones-side-mainblock__order
 
    &__order {
-      line-height: 21px;
       line-height: math.div(21, 14);
       letter-spacing: 0.1em;
       text-transform: uppercase;
@@ -408,7 +411,7 @@
       justify-content: end;
       background: rgba(0, 0, 0, 0.2);
       backdrop-filter: blur(20px);
-      border-radius: 10px;
+      border-radius: rem(10);
       padding: rem(10) rem(19);
       transition: all 0.3s ease 0s;
       white-space: nowrap;
@@ -425,8 +428,8 @@
          }
       }
       @media (max-width: $tablet) {
-         min-width: 60px;
-         min-height: 60px;
+         min-width: rem(60);
+         min-height: rem(60);
          border-radius: 50%;
          display: flex;
          justify-content: center;
@@ -438,8 +441,8 @@
          &::before {
             font-size: rem(24);
             position: relative;
-            left: 3px;
-            top: 3px;
+            left: rem(3);
+            top: rem(3);
          }
       }
       &._active {
@@ -458,7 +461,10 @@
       &.popup-margin {
          -webkit-animation: slide-out-right 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
          animation: slide-out-right 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
-         // display: none;
+      }
+      .menu-open & {
+         -webkit-animation: slide-out-right 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+         animation: slide-out-right 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
       }
    }
 }
@@ -668,6 +674,8 @@
 .catalog {
    position: relative;
    z-index: 4;
+   padding-top: rem(70);
+   padding-bottom: rem(70);
    @include adaptiveValue("padding-top", 100, 30);
    @include adaptiveValue("padding-bottom", 120, 20);
 
@@ -683,8 +691,8 @@
    &::before {
       background: #43ffd2;
       right: 0;
-      width: 707.54px;
-      height: 236.87px;
+      width: rem(708);
+      height: rem(236);
       @include adaptiveValue("width", 707, 350);
       @include adaptiveValue("height", 236, 200);
       @media (max-width: $tablet) {
@@ -694,8 +702,8 @@
    }
    &::after {
       left: -5%;
-      width: 879.44px;
-      height: 211.05px;
+      width: rem(880);
+      height: rem(212);
       @include adaptiveValue("width", 879, 450);
       @include adaptiveValue("height", 211, 300);
       background: #7d2253;
@@ -717,7 +725,7 @@
 
    &__title {
       @media (max-width: $tablet) {
-         font-size: 40px;
+         font-size: rem(40);
          margin: rem(100) rem(0) rem(0) rem(0);
       }
    }
@@ -767,6 +775,7 @@
    &::before,
    &::after {
       font-weight: bold;
+      font-size: rem(100);
       @include adaptiveValue("font-size", 200, 100);
       line-height: math.div(293, 200);
       letter-spacing: 0.04em;
@@ -787,8 +796,8 @@
       width: 100%;
       background: rgba(0, 0, 0, 0.2);
       backdrop-filter: blur(5px);
-      border-radius: 20px;
-      max-width: 540px;
+      border-radius: rem(20);
+      max-width: rem(540);
       padding: rem(30) rem(50);
       display: flex;
       flex-direction: column;
@@ -796,7 +805,7 @@
       z-index: 3;
       p {
          font-weight: 300;
-         font-size: 20px;
+         font-size: rem(20);
          line-height: math.div(26, 20);
          letter-spacing: 0.04em;
          &:not(:last-child) {
@@ -812,10 +821,11 @@
       // .column-catalog__item_1
 
       &_1 {
-         max-width: 520px;
-         left: 160px;
+         max-width: rem(520);
+         left: rem(160);
          background: none;
          backdrop-filter: none;
+         left: 0;
          @include adaptiveValue("left", 160, 0, 1300, 992, 1);
          @media (max-width: $tablet) {
             display: none;
@@ -824,14 +834,15 @@
       // .column-catalog__item_2
 
       &_2 {
-         max-width: 445px;
+         max-width: rem(445);
       }
       // .column-catalog__item_3
 
       &_3 {
          @media (min-width: $tablet) {
+            margin-left: rem(60);
             @include adaptiveValue("margin-left", 170, 20, 1400, 992, 1);
-            max-width: 445px;
+            max-width: rem(445);
             display: inline-flex;
             margin: rem(0) rem(0) rem(0) rem(170);
          }
@@ -839,13 +850,13 @@
       // .column-catalog__item_4
 
       &_4 {
-         max-width: 445px;
+         max-width: rem(445);
       }
       @media (max-width: $tablet) {
          max-width: 100%;
          text-align: center;
          align-items: center;
-         margin-bottom: 40px;
+         margin-bottom: rem(40);
       }
    }
 
@@ -853,7 +864,7 @@
 
    &__title {
       font-weight: bold;
-      font-size: 30px;
+      font-size: rem(30);
       line-height: math.div(44, 30);
       letter-spacing: 0.04em;
       text-transform: uppercase;
@@ -882,7 +893,7 @@
       &:not(:last-child) {
          margin-bottom: rem(4);
       }
-      font-size: 18px;
+      font-size: rem(18);
       line-height: math.div(27, 18);
       letter-spacing: 0.04em;
       text-transform: uppercase;
@@ -898,8 +909,8 @@
 
       &::before {
          content: "";
-         width: 4px;
-         height: 4px;
+         width: rem(4);
+         height: rem(4);
          background-color: #fff;
          border-radius: 50%;
          margin: rem(0) rem(15) rem(0) rem(0);
@@ -915,7 +926,7 @@
 
    &__link-catalog {
       font-weight: bold;
-      font-size: 12px;
+      font-size: rem(12);
       line-height: math.div(18, 12);
       letter-spacing: 0.1em;
       text-decoration: underline !important;
@@ -935,14 +946,16 @@
 
 .popular {
    position: relative;
+   padding-top: rem(70);
+   padding-bottom: rem(70);
    @include adaptiveValue("padding-top", 100, 50);
    @include adaptiveValue("padding-bottom", 100, 50);
 
    &::before,
    &::after {
       content: "";
-      width: 879.44px;
-      height: 211.05px;
+      width: rem(880);
+      height: rem(211);
       @include adaptiveValue("width", 814, 500);
       @include adaptiveValue("height", 661, 400);
       filter: blur(130px);
@@ -959,7 +972,7 @@
       background: #43ffd2;
       transform: rotate(32.83deg);
       opacity: 0.8;
-      border-radius: 40% 60% 0% 100% / 8% 100% 0% 92%;
+      // border-radius: 40% 60% 0% 100% / 8% 100% 0% 92%;
       background: rgba(67, 255, 210, 0.47);
       @media (max-width: $tablet) {
          left: 0%;
@@ -973,7 +986,7 @@
       right: 0%;
       transform: rotate(-32.83deg);
       top: 40%;
-      border-radius: 29% 71% 18% 82% / 27% 72% 28% 73%;
+      // border-radius: 29% 71% 18% 82% / 27% 72% 28% 73%;
 
       @media (max-width: $tablet) {
          top: 50%;
@@ -995,7 +1008,7 @@
       z-index: 4;
       span {
          position: relative;
-         left: 385px;
+         left: rem(385);
          @media (max-width: $mobile) {
             left: 0;
          }
@@ -1007,7 +1020,7 @@
    &__subtitle {
       text-align: center;
       font-weight: 300;
-      font-size: 20px;
+      font-size: rem(20);
       line-height: math.div(30, 20);
       letter-spacing: 0.02em;
       margin: rem(0) rem(0) rem(86) rem(0);
@@ -1020,10 +1033,10 @@
    &__background-ibg {
       position: absolute;
       width: 100%;
-      height: 748px;
-      top: 115px;
+      height: rem(748);
+      top: rem(115);
       right: 0;
-      max-width: 974px;
+      max-width: rem(974);
       z-index: 0;
       opacity: 0.7;
       z-index: 3;
@@ -1038,7 +1051,7 @@
       // margin: rem(0) rem(-15);
       &.swiper {
          @media (min-width: $tablet) {
-            padding: 10px 10px;
+            padding: rem(10) rem(10);
             margin: rem(0) rem(-15);
          }
       }
@@ -1093,24 +1106,24 @@
       top: 0px;
       right: 0px;
       width: 100%;
-      height: 60px;
+      height: rem(60);
       z-index: 3;
       text-align: right;
       display: flex;
       justify-content: end;
       @media (min-width: $tablet) {
-         top: -10px;
-         right: -10px;
+         top: rem(-10);
+         right: rem(-10);
       }
    }
 
    // .slide-popular__promotion
 
    &__promotion {
-      width: 60px;
-      height: 60px;
-      left: 465px;
-      top: 2588px;
+      width: rem(60);
+      height: rem(60);
+      // left: rem(465);
+      // top: rem(2588);
       background: #d978ac;
       border-radius: 50%;
       display: flex;
@@ -1144,14 +1157,14 @@
    // .slide-popular__content
 
    &__content {
-      padding: 10px;
+      padding: rem(10);
    }
 
    // .slide-popular__title
 
    &__title {
       display: block;
-      font-size: 20px;
+      font-size: rem(20);
       line-height: math.div(30, 20);
       letter-spacing: 0.04em;
       text-transform: uppercase;
@@ -1180,7 +1193,6 @@
 
    &__price {
       font-weight: bold;
-      line-height: 21px;
       line-height: math.div(21, 14);
       letter-spacing: 0.04em;
       text-transform: uppercase;
@@ -1234,73 +1246,75 @@
 }
 
 .popular-button-prev {
-   left: -120px;
+   left: rem(-120);
    &::before {
-      padding: 20px;
+      padding: rem(20);
    }
    @media (max-width: em(1380)) {
-      left: 10px;
+      left: rem(10);
    }
 }
 .popular-button-next {
-   right: -120px;
+   right: rem(-120);
    transform: rotate(-180deg);
    &::before {
-      padding: 20px;
+      padding: rem(20);
    }
    @media (max-width: em(1380)) {
-      right: 10px;
+      right: rem(10);
    }
 }
 //========================================================================================================================================================
 
 .order {
    position: relative;
+   padding-top: rem(70);
+   padding-bottom: rem(70);
    @include adaptiveValue("padding-top", 100, 50);
    @include adaptiveValue("padding-bottom", 100, 50);
    @media (max-width: $tablet) {
       &::before,
       &::after {
          content: "";
-         width: 879.44px;
-         height: 211.05px;
+         width: rem(880);
+         height: rem(211);
          @include adaptiveValue("width", 814, 500);
          @include adaptiveValue("height", 661, 400);
          filter: blur(130px);
          border-radius: 50%;
          position: absolute;
-         z-index: 2;
-         @media (max-width: $tablet) {
-            filter: blur(50px);
-         }
+         z-index: 1;
+         // @media (max-width: $tablet) {
+         //    filter: blur(50px);
+         // }
       }
       &::before {
          top: 50%;
          left: -5%;
          background: #43ffd2;
          transform: rotate(32.83deg);
-         opacity: 0.8;
-         border-radius: 40% 60% 0% 100% / 8% 100% 0% 92%;
+         // opacity: 0.8;
+         // border-radius: 40% 60% 0% 100% / 8% 100% 0% 92%;
          background: rgba(67, 255, 210, 0.47);
-         @media (max-width: $tablet) {
-            left: 0%;
-            top: 10%;
-            opacity: 1;
-            filter: blur(170px);
-         }
+         // @media (max-width: $tablet) {
+         left: 0%;
+         top: 10%;
+         opacity: 1;
+         filter: blur(170px);
+         // }
       }
       &::after {
          background: #7d2253;
          right: 0%;
          transform: rotate(-32.83deg);
          top: 40%;
-         border-radius: 29% 71% 18% 82% / 27% 72% 28% 73%;
+         // border-radius: 29% 71% 18% 82% / 27% 72% 28% 73%;
 
-         @media (max-width: $tablet) {
-            top: 50%;
-            filter: blur(170px);
-            transform: rotate(-180deg);
-         }
+         // @media (max-width: $tablet) {
+         //    top: 50%;
+         //    filter: blur(170px);
+         //    transform: rotate(-180deg);
+         // }
       }
    }
    // .order__bg
@@ -1309,8 +1323,10 @@
       position: absolute;
       top: 18%;
       left: 0;
+      z-index: 2;
       height: 100%;
-      width: 250px;
+      width: rem(250);
+      height: rem(600);
       @include adaptiveValue("width", 350, 120);
       @include adaptiveValue("height", 845, 250);
       img {
@@ -1357,7 +1373,8 @@
 
    &__items {
       position: relative;
-      max-width: 840px;
+      z-index: 5;
+      max-width: rem(840);
       padding: rem(40) rem(100) rem(0) rem(0);
       @include adaptiveValue("padding-right", 100, 30, 1400, 992, 1);
       @include adaptiveValue("max-width", 840, 700, 1400, 992, 1);
@@ -1385,7 +1402,7 @@
          flex-direction: column;
       }
       @media (min-width: $tablet) {
-         max-width: 242px;
+         max-width: rem(242);
       }
 
       // .content-order__column_1
@@ -1418,16 +1435,16 @@
             align-self: flex-end;
             position: relative;
             @media (max-width: $tablet) {
-               max-width: 150px;
+               max-width: rem(150);
             }
             &::before {
                content: "";
                background: #d978ac;
                display: inline-block;
-               width: 65px;
-               height: 10px;
+               width: rem(65);
+               height: rem(10);
                position: absolute;
-               top: -40px;
+               top: rem(-40);
                left: 0;
             }
          }
@@ -1435,8 +1452,9 @@
 
          &_2 {
             @media (max-width: $tablet) {
-               max-width: 205px;
+               max-width: rem(205);
                align-self: flex-end;
+               margin-right: rem(50);
                @include adaptiveValue("margin-right", 150, 10);
                // margin: rem(0) rem(150) rem(0) rem(0);
             }
@@ -1445,7 +1463,7 @@
 
          &_3 {
             @media (max-width: $tablet) {
-               max-width: 210px;
+               max-width: rem(210);
                align-self: flex-end;
                margin: rem(0) rem(300) rem(0) rem(0);
                @include adaptiveValue("margin-right", 300, 20);
@@ -1455,14 +1473,14 @@
 
          &_4 {
             @media (max-width: $tablet) {
-               max-width: 300px;
+               max-width: rem(300);
             }
          }
          // .content-order__item_5
 
          &_5 {
             @media (max-width: $tablet) {
-               max-width: 300px;
+               max-width: rem(300);
             }
          }
       }
@@ -1475,7 +1493,7 @@
          margin-bottom: rem(12);
       }
       font-weight: bold;
-      font-size: 30px;
+      font-size: rem(30);
       line-height: math.div(44, 30);
       letter-spacing: 0.04em;
       text-transform: uppercase;
@@ -1509,6 +1527,7 @@
    &__label {
       display: flex;
       align-items: center;
+      gap: rem(50);
       @include adaptiveValue("gap", 80, 30);
       &:not(:last-child) {
          margin-bottom: rem(30);
@@ -1594,8 +1613,8 @@
       }
       &::before {
          content: "";
-         width: 3px;
-         height: 3px;
+         width: rem(3);
+         height: rem(3);
          background-color: #fff;
          display: inline-block;
          position: absolute;
@@ -1622,8 +1641,8 @@
          font-size: rem(60);
          color: #43ffd2;
          position: absolute;
-         left: -31px;
-         top: -40px;
+         left: rem(-31);
+         top: rem(-40);
          @media (max-width: $tablet) {
             left: 105%;
             transform: rotateY(-180deg);
@@ -1633,7 +1652,7 @@
 }
 
 .images-occasion {
-   max-height: 292px;
+   max-height: rem(292);
    display: flex;
    gap: rem(30);
    @media (max-width: $tablet) {
@@ -1645,7 +1664,7 @@
       width: 100%;
       img {
          backdrop-filter: blur(20px);
-         border-radius: 20px;
+         border-radius: rem(20);
       }
 
       // .images-occasion__image-ibg_1
@@ -1683,8 +1702,8 @@
    }
    &::before {
       top: 33%;
-      width: 250px;
-      height: 300px;
+      width: rem(250);
+      height: rem(300);
       left: 33%;
       background: #43ffd2;
       transform: rotate(32.83deg);
@@ -1697,8 +1716,8 @@
    }
    &::after {
       background: #7d2253;
-      width: 420px;
-      height: 430px;
+      width: rem(420);
+      height: rem(430);
       left: 5%;
       transform: rotate(-32.83deg);
       top: 20%;
@@ -1717,8 +1736,8 @@
       @media (max-width: $tablet) {
          left: auto;
          right: 0;
-         width: 400px;
-         height: 800px;
+         width: rem(400);
+         height: rem(800);
          top: -5%;
          @include adaptiveValue("width", 400, 250, 991.98, 320, 1);
          @include adaptiveValue("height", 800, 400, 991.98, 320, 1);
@@ -1739,7 +1758,7 @@
 
    &__label {
       display: flex;
-      margin-bottom: 30px;
+      margin-bottom: rem(30);
       position: relative;
       z-index: 3;
       @media (max-width: $tablet) {
@@ -1806,10 +1825,11 @@
    // .body-questions__signature
 
    &__signature {
+      font-size: rem(100);
       @include adaptiveValue("font-size", 160, 100);
       flex: 0 1 71%;
       color: #0e2c2c;
-      padding: 30px;
+      padding: rem(30);
       @media (max-width: $tablet) {
          text-align: center;
       }
@@ -1867,7 +1887,7 @@
 
    &__confidentiality {
       font-family: "Roboto Condensed";
-      font-size: 10px;
+      font-size: rem(10);
       line-height: math.div(12, 10);
       letter-spacing: 0.02em;
       color: #ffffff;
@@ -1896,10 +1916,10 @@
       }
    }
    &::before {
-      bottom: -200px;
+      bottom: rem(-200);
       left: -5%;
-      width: 250px;
-      height: 300px;
+      width: rem(250);
+      height: rem(300);
       // filter: blur(150px);
       background: #43ffd2;
       transform: rotate(32.83deg);
@@ -1910,17 +1930,17 @@
       }
    }
    &::after {
-      bottom: -200px;
+      bottom: rem(-200);
       right: 0;
-      width: 350px;
-      height: 350px;
+      width: rem(350);
+      height: rem(350);
       // filter: blur(120px);
       background-color: #7d2253;
       transform: rotate(32.83deg);
       z-index: 2;
       opacity: 1;
       @media (max-width: $mobileSmall) {
-         right: -100px;
+         right: rem(-100);
       }
    }
    // .social__container
@@ -1953,10 +1973,10 @@
       bottom: 0;
       left: 50%;
       &::before {
-         top: -100px;
-         left: -100px;
-         width: 300px;
-         height: 311px;
+         top: rem(-100);
+         left: rem(-100);
+         width: rem(300);
+         height: rem(311);
          content: "";
          filter: blur(100px);
          border-radius: 50%;
@@ -1978,6 +1998,7 @@
    &::before {
       content: "instagram";
       font-weight: bold;
+      font-size: rem(100);
       @include adaptiveValue("font-size", 200, 100);
       line-height: math.div(296, 200);
       letter-spacing: 0.04em;
@@ -2066,8 +2087,8 @@
       font-family: Relative;
       font-style: normal;
       font-weight: normal;
-      font-size: 160px;
-      line-height: 60px;
+      font-size: rem(80);
+      line-height: math.div(60, 160);
       transform: rotate(0deg);
       text-transform: lowercase;
       color: #ffffff;
@@ -2090,7 +2111,7 @@
    &__item {
       &::before {
          color: #43ffd2;
-         font-size: rem(40);
+         font-size: rem(26);
          @include adaptiveValue("font-size", 40, 20);
          transition: color 0.3s ease 0s;
       }

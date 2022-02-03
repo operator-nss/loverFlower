@@ -10,8 +10,8 @@
       display: block;
       position: relative;
       min-width: rem(20);
-      top: 40px;
-      left: 10px;
+      top: rem(40);
+      left: rem(10);
       min-height: rem(14);
       cursor: pointer;
       z-index: 20;
@@ -43,7 +43,7 @@
          -webkit-animation: roll-in-blurred-left 0.65s cubic-bezier(0.23, 1, 0.32, 1) 0s both;
          animation: roll-in-blurred-left 0.65s cubic-bezier(0.23, 1, 0.32, 1) 0s both;
          left: 75%;
-         top: 25px;
+         top: rem(25);
          span {
             width: 0;
          }
@@ -99,43 +99,6 @@
 
 //========================================================================================================================================================
 
-// &::before,
-// &::after {
-//    content: "";
-//    width: 879.44px;
-//    height: 211.05px;
-//    @include adaptiveValue("width", 879, 250);
-//    @include adaptiveValue("height", 211, 150);
-//    filter: blur(130px);
-//    border-radius: 50%;
-//    position: absolute;
-//    @media (max-width: $tablet) {
-//       filter: blur(50px);
-//    }
-// }
-// &::before {
-//    top: 30%;
-//    left: -5%;
-//    background: #43ffd2;
-//    transform: rotate(32.83deg);
-//    z-index: 2;
-//    opacity: 1;
-//    @media (max-width: $tablet) {
-//       top: 20%;
-//       left: -25%;
-//    }
-// }
-// &::after {
-//    background: #7d2253;
-//    right: 0;
-//    transform: rotate(-32.83deg);
-//    top: 30%;
-//    @media (max-width: $tablet) {
-//       top: 20%;
-//    }
-// }
-
-//========================================================================================================================================================
 
 .logo-header {
    display: none;
@@ -144,14 +107,15 @@
       @media (max-width: $tablet) {
          display: block;
          font-family: Cormorant;
-         font-size: 20px;
+         font-size: rem(20);
          line-height: math.div(24, 20);
          letter-spacing: 0.2em;
          text-transform: uppercase;
          color: #ffffff;
          position: absolute;
+         left: rem(200);
          @include adaptiveValue("left", 400, 65, 991.98, 320);
-         top: 15px;
+         top: rem(15);
       }
    }
 }
@@ -164,44 +128,22 @@
    width: 100%;
    z-index: 10;
    min-height: rem(65);
-
-   &._header-show {
+   transition: all 0.5s ease 0s;
+   &._header-scroll {
       box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
-      -webkit-animation: slide-in-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-      animation: slide-in-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
       position: fixed;
-      top: 0;
+      top: -150%;
       left: 0;
       width: 100%;
-      z-index: 50;
+      z-index: 10;
       background-color: #0f2222;
       @media (max-width: $tablet) {
          min-height: rem(50);
       }
    }
-   @-webkit-keyframes slide-in-top {
-      0% {
-         -webkit-transform: translateY(-1000px);
-         transform: translateY(-1000px);
-         opacity: 0;
-      }
-      100% {
-         -webkit-transform: translateY(0);
-         transform: translateY(0);
-         opacity: 1;
-      }
-   }
-   @keyframes slide-in-top {
-      0% {
-         -webkit-transform: translateY(-1000px);
-         transform: translateY(-1000px);
-         opacity: 0;
-      }
-      100% {
-         -webkit-transform: translateY(0);
-         transform: translateY(0);
-         opacity: 1;
-      }
+
+   &._header-show {
+      top: 0;
    }
 
    // .header__container
@@ -211,7 +153,7 @@
       align-items: center;
       @media (max-width: $tablet) {
          justify-content: space-between;
-         min-height: 55px;
+         min-height: rem(55);
       }
    }
 
@@ -222,7 +164,7 @@
       font-family: Cormorant;
       font-style: normal;
       font-weight: 300;
-      font-size: 60px;
+      font-size: rem(60);
       line-height: math.div(73, 60);
       letter-spacing: 0.02em;
       text-transform: uppercase;
@@ -230,13 +172,13 @@
       position: relative;
       display: block;
       span {
-         font-size: 50px;
+         font-size: rem(50);
          line-height: math.div(61, 50);
          color: #ffffff;
          position: absolute;
          display: inline-block;
-         top: 13px;
-         left: 8px;
+         top: rem(13);
+         left: rem(8);
       }
    }
 
@@ -246,10 +188,10 @@
    }
 }
 .menu {
-   max-width: 800px;
+   max-width: rem(800);
    width: 100%;
    @media (max-width: em(1100)) {
-      max-width: 610px;
+      max-width: rem(610);
    }
    @media (max-width: $tablet) {
       max-width: 0;
@@ -345,22 +287,22 @@
    // .menu__body
 
    &__body {
+      display: none;
       @media (max-width: $tablet) {
          position: fixed;
          width: 80%;
-         min-height: 100%;
          top: 0;
          left: -100%;
-         overflow: auto;
          background-color: #000;
          transition: all 0.3s ease 0s;
          opacity: 1;
+         height: 100%;
          padding: rem(10) rem(10) rem(10) rem(20);
-         z-index: 7;
+         z-index: 11;
          display: flex;
          flex-direction: column;
          justify-content: start;
-
+         overflow: auto;
          .menu-open & {
             left: 0;
             &::before {
@@ -390,7 +332,7 @@
    // .body-menu__link
 
    &__link {
-      font-size: 10px;
+      font-size: rem(10);
       line-height: math.div(15, 10);
       letter-spacing: 0.04em;
       color: #555555;
@@ -401,7 +343,6 @@
    // .body-menu__phone
 
    &__phone {
-      line-height: 21px;
       display: inline-block;
       line-height: math.div(21, 14);
       letter-spacing: 0.1em;
@@ -417,7 +358,7 @@
    // visibility: hidden;
    display: none;
    position: absolute;
-   top: 20px;
+   top: rem(20);
    left: 0;
    // .link-catalog-header__body
 
@@ -425,7 +366,7 @@
       padding: rem(10) rem(20);
       background: rgba(0, 0, 0, 0.2);
       backdrop-filter: blur(20px);
-      min-width: 260px;
+      min-width: rem(260);
    }
 
    // .link-catalog-header__list
@@ -436,7 +377,6 @@
    // .link-catalog-header__item
 
    &__item {
-      line-height: 21px;
       line-height: math.div(21, 14);
       letter-spacing: 0.04em;
       text-transform: uppercase;
