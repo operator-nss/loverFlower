@@ -71,7 +71,7 @@ body::after {
    // .call-popup__popup
 
    &__popup {
- 
+
    }
 
    // .call-popup__wrapper
@@ -163,7 +163,7 @@ body::after {
       font-family: Cormorant;
       font-size: 40px;
       line-height: math.div(48, 40);
-      @include adaptiveValue("font-size", 40, 26);
+      @include adaptiveValue("font-size", 40, 22);
       letter-spacing: 0.02em;
       text-transform: uppercase;
       position: relative;
