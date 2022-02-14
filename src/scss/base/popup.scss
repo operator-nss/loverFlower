@@ -167,6 +167,7 @@ body::after {
       letter-spacing: 0.02em;
       text-transform: uppercase;
       position: relative;
+      
       &:not(:last-child) {
          @include adaptiveValue("margin-bottom", 40, 26);
       }
